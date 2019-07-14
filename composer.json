@@ -1,0 +1,39 @@
+{
+	"name": "squadron-api/app-settings",
+	"description": "Application settings module",
+	"keywords": ["laravel", "squadron", "settings", "api"],
+	"license": "MIT",
+	"authors": [{
+		"name": "Andrey Novikov",
+		"email": "andrew@7glyphs.com",
+		"homepage": "https://7glyphs.com",
+		"role": "Developer"
+	}],
+	"require": {
+		"php": ">=7.2",
+        "squadron-api/base": "0.0.*"
+	},
+	"require-dev": {
+        "squadron-api/test-helpers": "0.0.*"
+	},
+    "suggest": {
+        "squadron-api/user": "to be able to change app settings (as `root` user)"
+    },
+	"autoload": {
+		"psr-4": {
+			"Squadron\\AppSettings\\": "src/"
+		}
+	},
+    "autoload-dev": {
+        "psr-4": {
+            "Squadron\\AppSettings\\Tests\\": "tests/"
+        }
+    },
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Squadron\\AppSettings\\ServiceProvider"
+			]
+		}
+	}
+}
